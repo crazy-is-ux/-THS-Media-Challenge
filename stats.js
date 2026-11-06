@@ -1,5 +1,5 @@
 /* THS Statistik: SUPABASE_URL und SUPABASE_ANON_KEY nach Einrichtung eintragen. Niemals service_role verwenden. */
-window.THS_CONFIG={url:"",anonKey:""};
+window.THS_CONFIG={url:"https://hzhpdxxxwpcplkohcdgx.supabase.co",anonKey:"sb_publishable_pHQXlQBn3NTeXAp4moKt-w_aDprNxc3"};
 window.THSStats={
  async submit(quiz,answers){
   const c=window.THS_CONFIG;
