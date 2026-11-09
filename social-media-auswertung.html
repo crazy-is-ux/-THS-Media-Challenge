@@ -18,8 +18,8 @@ const groups=[
 {key:"Geschlecht",title:"02 · Geschlecht",hint:"Selbstauskunft der Teilnehmenden",options:["Männlich","Weiblich","Divers","Keine Angabe"]},
 {key:"Bildschirmzeit",title:"03 · Tägliche Social-Media-Zeit",hint:"Wie lange werden Social-Media-Apps genutzt?",options:["Unter 1 Stunde","1–2 Stunden","2–3 Stunden","3–4 Stunden","Mehr als 4 Stunden"]},
 {key:"Lieblings-App",title:"04 · Meistgenutzte App",hint:"Welche App wird am häufigsten genutzt?",options:["Instagram","TikTok","Snapchat","YouTube","WhatsApp","Andere"]},
-{key:"Hauptnutzung",title:"05 · Gründe für die Nutzung",hint:"Mehrfachauswahl · Summe kann über 100 % liegen",options:["Unterhaltung und Zeitvertreib","Kommunikation mit Freunden und Familie","Nachrichten und Informationen","Lernen und Bildung","Inspiration und Kreativität"],labels:["Unterhaltung & Zeitvertreib","Freunde & Familie","Nachrichten & Informationen","Lernen & Bildung","Inspiration & Kreativität"]},
-{key:"Konzentration",title:"06 · Einfluss auf Konzentration",hint:"Wie stark beeinflusst Social Media den Alltag?",options:["Gar nicht","Wenig","Mittelmäßig","Stark","Sehr stark"]}
+{key:"Hauptnutzung",title:"05 · Wofür nutzt ihr Social Media?",hint:"Mehrfachauswahl · Summe kann über 100 % liegen",options:["Unterhaltung und Zeitvertreib","Kommunikation mit Freunden und Familie","Nachrichten und Informationen","Lernen und Bildung","Inspiration und Kreativität"],labels:["Unterhaltung & Zeitvertreib","Freunde & Familie","Nachrichten & Informationen","Lernen & Bildung","Inspiration & Kreativität"]},
+{key:"Konzentration",title:"06 · Einfluss im Alltag",hint:"Wie stark beeinflusst Social Media euren Alltag?",options:["Gar nicht","Wenig","Mittelmäßig","Stark","Sehr stark"]}
 ];
 function ageGroup(n){return n<15?"10–14":n<18?"15–17":n<25?"18–24":n<40?"25–39":n<60?"40–59":"60+"}
 function aggregate(rows,g){const counts=Object.fromEntries(g.options.map(x=>[x,0]));rows.filter(x=>x.question===g.key).forEach(x=>{const k=g.key==="Alter"?ageGroup(Number(x.answer)):x.answer;if(k in counts)counts[k]+=Number(x.responses)||0});return counts}
